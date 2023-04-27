@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(102, 6, 102);
+  position: relative;
+}
+.container {
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game {
+  background-color: lightblue;
+  padding: 80px;
+  border-radius: 25px;
+}
+.game h1 {
+  font-size: 3rem;
+}
+/* gameboard */
+.game .gameboard > * {
+  padding: 10px 0;
+}
+.game .gameboard .board {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.game .gameboard .board .board-box {
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 15px;
+  color: #fff;
+  border-radius: 5px;
+  user-select: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game .gameboard .board .board-box.show {
+  color: green;
+}
+/* details */
+.game .gameboard .details {
+  font-size: 1.7rem;
+  padding: 20px 0;
+}
+/* button */
+.game .gameboard .reset-btn {
+  width: 100%;
+  padding: 15px;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: all 0.8s ease-in-out;
+  cursor: pointer;
+}
+.game .gameboard .reset-btn:hover {
+  background-color: black;
+  color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .game {
+    width: 100vw;
+  }
+  .game h1 {
+    font-size: 2rem;
+  }
+  .game .gameboard .board .board-box {
+    width: 40px;
+    height: 40px;
+  }
+  .game .details .details-hint {
+    font-size: 1rem;
+  }
+}
