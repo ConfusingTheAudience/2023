@@ -1,0 +1,35 @@
+.chessboard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 514px; /* 2px for border, 512 = 64*8 */
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+}
+.chessboard::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  background-color: #212529;
+  width: 110%; /* 565.4px */
+  height: 110%;
+  border-radius: 15px;
+}
+.square {
+  width: 64px;
+  height: 64px;
+  position: relative;
+}
+.square-white {
+  background-color: #eeeed2;
+}
+.square-black {
+  background-color: #769656;
+}
+
+.square-clicked {
+  background-color: lightblue;
+}
+
+/* JS -> renderChessboard.JS */

@@ -1,0 +1,18 @@
+@import "chessboard.css";
+@import "pieces.css";
+@import "notation.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(0, 0, 0, 0.747);
+}
+.chess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
