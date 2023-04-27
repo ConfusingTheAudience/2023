@@ -18,3 +18,5 @@ NO UX/UI Admin Dashboard with theme switch, mobile friendly, basic mechanism of 
 
 images inserted to html as svg (from google icons)
 <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by See Icons - Flaticon</a>
+
+USED IMPORTS OF SCSS AND JS
