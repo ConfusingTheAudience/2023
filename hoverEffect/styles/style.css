@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+}
+.container {
+  font-size: 5rem;
+}
+
+.wordBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wordBox > * {
+  cursor: pointer;
+}
+.container .wordBox:last-child {
+  margin-top: 20px;
+}
+
+.effect {
+  display: flex;
+}
+
+.container:has(.highlight:hover) .word:not(.highlight:hover) {
+  opacity: 0.2;
+}
+
+.letter {
+  transition: all 0.5s ease-in-out;
+}
+
+.highlight:hover .letter:nth-child(1) {
+  transform: translate(-15%, 20%) rotate(15deg);
+}
+.highlight:hover .letter:nth-child(2) {
+  transform: translate(-10%, 15%) rotate(10deg);
+}
+.highlight:hover .letter:nth-child(3) {
+  transform: translate(-5%, 10%) rotate(5deg);
+}
+.highlight:hover .letter:nth-child(4) {
+  transform: translate(-15%, 20%) rotate(-15deg);
+}
+.highlight:hover .letter:nth-child(5) {
+  transform: translate(-15%, 20%) rotate(-15deg);
+}
+.highlight:hover .letter:nth-child(6) {
+  transform: translate(-35%, 10%) rotate(-15deg);
+}
+.highlight:hover .letter:nth-child(7) {
+  transform: translate(-35%, 20%) rotate(35deg);
+}
+.highlight:hover .letter:nth-child(8) {
+  transform: translate(-25%, 20%) rotate(35deg);
+}
+.highlight:hover .letter:nth-child(9) {
+  transform: translate(-15%, 20%) rotate(35deg);
+}
+.highlight:hover .letter:nth-child(10) {
+  transform: translate(-15%, 20%) rotate(25deg);
+}
+.highlight:hover .letter:nth-child(11) {
+  transform: translate(-25%, 10%) rotate(5deg);
+}
+.highlight:hover .letter:nth-child(12) {
+  transform: translate(-40%, -20%) rotate(15deg);
+}
+.highlight:hover .letter:nth-child(13) {
+  transform: translate(-30%, -30%) rotate(10deg);
+}
