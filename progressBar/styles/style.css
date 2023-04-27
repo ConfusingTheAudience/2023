@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Mukta", sans-serif;
+}
+.container {
+  position: relative;
+}
+/* steps */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  user-select: none;
+}
+.steps .steps-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid gray;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+.steps .steps-circle.active {
+  border-color: lightblue;
+}
+/* progress bar */
+.progress,
+.progress-line {
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  width: 99%;
+  height: 5px;
+  background-color: gray;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.progress-line {
+  /* change width via js */
+  width: 20%;
+  background-color: lightblue;
+  transition: all 0.5s ease-in-out;
+}
+/* btn */
+.btn {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+.btn .btns {
+  width: 20%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  color: #000;
+  background-color: lightblue;
+  font-size: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+}
+.btn .btns:hover {
+  color: lightblue;
+  background-color: #000;
+}
+.btn .btns:first-child {
+  opacity: 0.2;
+  pointer-events: none;
+}
