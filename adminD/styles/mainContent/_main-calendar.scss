@@ -1,0 +1,154 @@
+.main-calendar {
+    color: black;
+    padding: 50px;
+    &.main-hide {
+      display: none;
+    }
+    h2 {
+      padding-bottom: 40px;
+      &::after {
+        content: " (click scroll on meet to remove it)";
+        font-size: 0.8rem;
+      }
+    }
+    .calendar-card {
+      background-color: var(--leftRightBackgrounds, $leftRightBackgrounds);
+      display: flex;
+      height: 70vh;
+      position: relative;
+      .calendar-panel {
+        width: 50%;
+        // background-color: aqua;
+        padding: 30px;
+        .calendar-upPanel {
+          display: flex;
+          justify-content: space-between;
+          padding: 40px 0;
+          .upPanel-group {
+            border-radius: 15px;
+            padding: 10px;
+            font-weight: bold;
+            user-select: none;
+          }
+          .upPanel-arrow {
+            background-color: #fff;
+            cursor: pointer;
+            &:hover {
+              background-color: #000;
+              color: #fff;
+            }
+          }
+          .upPanel-date {
+            user-select: none;
+          }
+        }
+        .calendar-downPanel {
+          padding-top: 50px;
+          .downPanel-weekDays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            padding-bottom: 40px;
+            gap: 10px;
+            user-select: none;
+            p {
+              width: 50px;
+              font-weight: bold;
+              text-align: center;
+            }
+          }
+          .downPanel-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            .day {
+              width: 50px;
+              height: 50px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #fff;
+              background-color: var(
+                --logoSpanTitleAndMainTitle,
+                $logoSpanTitleAndMainTitle
+              );
+              cursor: pointer;
+              font-size: 1.5rem;
+              &:hover {
+                background-color: #fff;
+                color: #000;
+              }
+              &.dayCurrent {
+                background-color: green;
+                color: #fff;
+                &:hover {
+                  background-color: #fff;
+                  color: #000;
+                }
+              }
+              &.dayInactive {
+                opacity: 0.4;
+                user-select: none;
+                pointer-events: none;
+              }
+            }
+          }
+        }
+      }
+      .calendar-notification {
+        width: 50%;
+        .notification-new {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 20%;
+          .notification-addNew {
+            border: 5px dashed black;
+            border-radius: 25px;
+            padding: 20px;
+            font-size: 3rem;
+            cursor: pointer;
+            &:hover {
+              color: var(
+                --logoSpanTitleAndMainTitle,
+                $logoSpanTitleAndMainTitle
+              );
+              border: 5px dashed
+                var(--logoSpanTitleAndMainTitle, $logoSpanTitleAndMainTitle);
+            }
+          }
+        }
+        .notification-list {
+          overflow: hidden;
+          height: 80%;
+          .meet {
+            background-color: #fff;
+            padding: 15px;
+            margin: 5px 0;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border-right: 5px solid
+              var(--logoSpanTitleAndMainTitle, $logoSpanTitleAndMainTitle);
+            cursor: pointer;
+            &:hover {
+              background-color: #000;
+              color: #fff;
+              border-right: 10px solid
+                var(--logoSpanTitleAndMainTitle, $logoSpanTitleAndMainTitle);
+            }
+            .meet-title {
+              font-size: 1.4rem;
+              font-weight: bold;
+              // FOR JS TO NOT TARGET TITLE AND DATE
+              pointer-events: none;
+            }
+            .meet-date {
+              font-size: 1.2rem;
+              opacity: 0.7;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+      // CALENDAR ADD EVENT
+    }
+  }

@@ -1,0 +1,1413 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  background-color: #fff;
+}
+
+.container.hide-custom {
+  grid-template-columns: 0.3fr 1.3fr 100px;
+}
+
+.container.untouch {
+  opacity: 0.2;
+  user-select: none;
+  pointer-events: none;
+}
+
+.container .leftBar {
+  box-shadow: 10px 0 5px -2px #888;
+  background-color: var(--leftRightBackgrounds, #d6cdff);
+}
+
+.container .leftBar-header {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.container .leftBar-header h1 {
+  text-align: center;
+  padding: 40px 0;
+  user-select: none;
+}
+
+.container .leftBar-header span {
+  color: var(--logoSpanTitleAndMainTitle, #3535ff);
+}
+
+.container .leftBar-nav {
+  overflow: hidden;
+}
+
+.container .leftBar-nav .leftBar-nav-list .leftBar-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #000;
+  padding: 15px;
+  padding-left: 40px;
+  transition: all 0.5s ease-in-out;
+}
+
+.container .leftBar-nav .leftBar-nav-list .leftBar-nav-link svg {
+  transition: all 0.5s ease-in-out;
+}
+
+.container .leftBar-nav .leftBar-nav-list .leftBar-nav-link.current {
+  color: #fff;
+  font-size: 1.5em;
+  background-color: var(--logoSpanTitleAndMainTitle, #3535ff);
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.container .leftBar-nav .leftBar-nav-list .leftBar-nav-link.current svg {
+  width: 35px;
+  height: 35px;
+  fill: #fff;
+}
+
+.container .leftBar-nav .leftBar-nav-list .leftBar-nav-link:hover:not(.current) {
+  transform: translateX(10px);
+  color: var(--notCurrentMenuPick, #3535ff);
+}
+
+.container .leftBar-nav .leftBar-nav-list .leftBar-nav-link:hover:not(.current) svg {
+  fill: var(--notCurrentMenuPick, #3535ff);
+}
+
+.container .main {
+  overflow: auto;
+}
+
+.container .main-title {
+  text-align: center;
+  padding: 10px 0;
+  color: var(--logoSpanTitleAndMainTitle, #3535ff);
+}
+
+.container .main .main-home {
+  padding: 50px;
+  height: calc(100vh - 59px);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.container .main .main-home.main-hide {
+  display: none;
+}
+
+.container .main .main-home .case {
+  position: relative;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: var(--leftRightBackgrounds, #d6cdff);
+}
+
+.container .main .main-home .case .case-hider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #a7a7a7;
+  opacity: 0.6;
+  border-radius: 25px;
+}
+
+.container .main .main-home .case .case-show {
+  filter: blur(2rem);
+  pointer-events: none;
+}
+
+.container .main .main-home .case .case-show h2 {
+  text-align: center;
+  color: var(--logoSpanTitleAndMainTitle, #3535ff);
+}
+
+.container .main .main-home .case-profile {
+  grid-column: 1/4;
+  grid-row: 1/4;
+}
+
+.container .main .main-home .case-profile .case-show h2 {
+  color: #000;
+}
+
+.container .main .main-home .case-profile .case-show h2 span {
+  color: var(--logoSpanTitleAndMainTitle, #3535ff);
+}
+
+.container .main .main-home .case-profile .case-show .case-show-details {
+  margin: 10px 0;
+  padding: 5px 0;
+  border-radius: 25px;
+}
+
+.container .main .main-home .case-profile .case-show .case-show-details .flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.container .main .main-home .case-profile .case-show .case-show-details .flex-container .flex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.container .main .main-home .case-profile .case-show .case-show-logout {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #000;
+  margin-top: 50px;
+}
+
+.container .main .main-home .case-earnings {
+  grid-column: 4/7;
+}
+
+.container .main .main-home .case-earnings .case-show .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.container .main .main-home .case-earnings .case-show .grid .grid-img {
+  margin: 0 auto;
+}
+
+.container .main .main-home .case-earnings .case-show .grid .grid-img svg {
+  display: block;
+  height: 150px;
+  width: 150px;
+}
+
+.container .main .main-home .case-earnings .case-show .grid .grid-description .description-flex {
+  display: flex;
+  padding: 5px 0;
+}
+
+.container .main .main-home .case-earnings .case-show .grid .grid-description .description-flex p:first-child {
+  width: 50%;
+}
+
+.container .main .main-home .case-orders {
+  grid-column: 4/7;
+}
+
+.container .main .main-home .case-orders .case-show {
+  text-align: center;
+}
+
+.container .main .main-home .case-orders .case-show h3 {
+  font-size: 0.8rem;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.container .main .main-home .case-orders .case-show .flex {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.container .main .main-home .case-meetings {
+  grid-column: 4/7;
+}
+
+.container .main .main-home .case-meetings .case-show {
+  text-align: center;
+}
+
+.container .main .main-home .case-meetings .case-show h3 {
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+.container .main .main-home .case-meetings .case-show .secretaryCall {
+  padding-top: 50px;
+}
+
+.container .main .main-home .case-meetings .case-show .secretaryCall a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.container .main .main-order {
+  color: black;
+  padding: 50px;
+}
+
+.container .main .main-order.main-hide {
+  display: none;
+}
+
+.container .main .main-order .order-title {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.container .main .main-order .order-title h2 {
+  text-transform: uppercase;
+}
+
+.container .main .main-order .order-title p {
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.container .main .main-order .order-table {
+  height: 60vh;
+  overflow: auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.container .main .main-order .order-table::-webkit-scrollbar-track {
+  border-radius: 0px;
+}
+
+.container .main .main-order .order-table::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+}
+
+.container .main .main-order .order-table .order-tableColumn {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr 0.9fr 1fr 0.5fr 0.5fr;
+  align-items: center;
+  background-color: lightblue;
+  padding: 20px 0 20px 20px;
+  user-select: none;
+  font-weight: bold;
+}
+
+.container .main .main-order .order-table .order-tableRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container .main .main-order .order-table .order-tableRow .order-tableRow-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr 0.9fr 1fr 0.5fr 0.5fr;
+  padding-left: 20px;
+  padding-top: 1px;
+  background-color: lightgreen;
+}
+
+.container .main .main-order .order-table .order-tableRow .order-tableRow-grid.order-tableRow-gridYellow {
+  background-color: #ffff8e;
+}
+
+.container .main .main-order .order-table .order-tableRow .order-tableRow-grid.order-tableRow-gridYellow:hover {
+  background-color: yellow;
+}
+
+.container .main .main-order .order-table .order-tableRow .order-tableRow-grid.order-tableRow-gridRed {
+  background-color: #ff5757;
+}
+
+.container .main .main-order .order-table .order-tableRow .order-tableRow-grid.order-tableRow-gridRed:hover {
+  background-color: #ff0c0c;
+}
+
+.container .main .main-order .order-table .order-tableRow .order-tableRow-grid:hover {
+  background-color: #35fc35;
+}
+
+.container .main .main-order .order-table .order-tableRow .order-tableRow-grid > * {
+  padding: 10px 0;
+}
+
+.container .main .main-order .order-count {
+  background-color: lightblue;
+  text-align: right;
+  padding: 10px 50px 10px 0;
+  user-select: none;
+  font-size: 2rem;
+}
+
+.container .main .main-order .order-detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #000;
+  padding: 50px;
+  z-index: 1;
+}
+
+.container .main .main-order .order-detail.order-detail-hide {
+  display: none;
+}
+
+.container .main .main-order .order-detail .order-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container .main .main-order .order-detail .order-container .order-info {
+  width: 50%;
+  text-align: center;
+}
+
+.container .main .main-order .order-detail .order-container .order-info svg {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+}
+
+.container .main .main-order .order-detail .order-container .order-info h2 {
+  font-size: 3rem;
+}
+
+.container .main .main-order .order-detail .order-container .order-description {
+  width: 50%;
+}
+
+.container .main .main-order .order-detail .order-container .order-description .order-flex {
+  width: max-content;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.container .main .main-order .order-detail .order-container .order-description .order-flex.importantInfo {
+  background-color: lightblue;
+  border-radius: 25px;
+}
+
+.container .main .main-order .order-detail .order-container .order-description .order-flex p:first-child {
+  font-weight: bold;
+}
+
+.container .main .main-order .order-detail .order-detailBack {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container .main .main-analytics {
+  color: black;
+  background-color: var(--leftRightBackgrounds, #d6cdff);
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 59px);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.container .main .main-analytics.main-hide {
+  display: none;
+}
+
+.container .main .main-analytics .analytics-title {
+  font-size: 3rem;
+  font-style: italic;
+}
+
+.container .main .main-analytics .analytics-icons {
+  display: flex;
+  align-items: center;
+}
+
+.container .main .main-analytics .analytics-icons .analytics-imgL {
+  width: 200px;
+  height: 200px;
+}
+
+.container .main .main-analytics .analytics-icons .analytics-imgR {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 40px;
+  right: 25px;
+}
+
+.container .main .main-analytics .analytics-backTitle {
+  font-weight: bold;
+}
+
+.container .main .main-products {
+  color: black;
+  padding: 40px;
+}
+
+.container .main .main-products.main-hide {
+  display: none;
+}
+
+.container .main .main-products h2 {
+  margin-bottom: 20px;
+}
+
+.container .main .main-products .product-card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.container .main .main-products .product-card .product-item {
+  width: calc(25% + 80px);
+  flex-grow: 1;
+  padding: 40px;
+  border-radius: 5px;
+  background-color: var(--leftRightBackgrounds, #d6cdff);
+  text-align: center;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.container .main .main-products .product-card .product-item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: lightblue;
+  top: -5px;
+  left: -5px;
+  border-radius: 5px;
+  transform: translateZ(-1px);
+}
+
+.container .main .main-products .product-card .product-item > * {
+  margin-top: 10px;
+}
+
+.container .main .main-products .product-card .product-item .product-cost {
+  color: green;
+  font-weight: bold;
+}
+
+.container .main .main-products .product-card .product-item .product-time {
+  font-style: italic;
+}
+
+.container .main .main-products .product-card .product-item .view-detail {
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.container .main .main-products .product-card .product-item .view-detail:hover {
+  background-color: lightblue;
+}
+
+.container .main .main-products .product-detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #000;
+  padding: 50px;
+  z-index: 1;
+}
+
+.container .main .main-products .product-detail.product-detail-hide {
+  display: none;
+}
+
+.container .main .main-products .product-detail .product-detailBack {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.container .main .main-products .product-detail .product-detailBack:hover {
+  background-color: lightblue;
+}
+
+.container .main .main-products .product-detail .product-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+.container .main .main-products .product-detail .product-info h3 {
+  width: 10%;
+}
+
+.container .main .main-products .product-detail .product-info svg {
+  margin-right: 50px;
+}
+
+.container .main .main-products .product-detail .product-info .product-info-prep {
+  display: flex;
+  align-items: center;
+}
+
+.container .main .main-products .product-detail .product-info .product-info-cook {
+  display: flex;
+  align-items: center;
+}
+
+.container .main .main-products .product-detail .product-info .product-info-ingredients {
+  display: flex;
+  align-items: center;
+}
+
+.container .main .main-calendar {
+  color: black;
+  padding: 50px;
+}
+
+.container .main .main-calendar.main-hide {
+  display: none;
+}
+
+.container .main .main-calendar h2 {
+  padding-bottom: 40px;
+}
+
+.container .main .main-calendar h2::after {
+  content: " (click scroll on meet to remove it)";
+  font-size: 0.8rem;
+}
+
+.container .main .main-calendar .calendar-card {
+  background-color: var(--leftRightBackgrounds, #d6cdff);
+  display: flex;
+  height: 70vh;
+  position: relative;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel {
+  width: 50%;
+  padding: 30px;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-upPanel {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-upPanel .upPanel-group {
+  border-radius: 15px;
+  padding: 10px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-upPanel .upPanel-arrow {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-upPanel .upPanel-arrow:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-upPanel .upPanel-date {
+  user-select: none;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel {
+  padding-top: 50px;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel .downPanel-weekDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding-bottom: 40px;
+  gap: 10px;
+  user-select: none;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel .downPanel-weekDays p {
+  width: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel .downPanel-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel .downPanel-days .day {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: var(--logoSpanTitleAndMainTitle, #3535ff);
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel .downPanel-days .day:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel .downPanel-days .day.dayCurrent {
+  background-color: green;
+  color: #fff;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel .downPanel-days .day.dayCurrent:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel .downPanel-days .day.dayInactive {
+  opacity: 0.4;
+  user-select: none;
+  pointer-events: none;
+}
+
+.container .main .main-calendar .calendar-card .calendar-notification {
+  width: 50%;
+}
+
+.container .main .main-calendar .calendar-card .calendar-notification .notification-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+}
+
+.container .main .main-calendar .calendar-card .calendar-notification .notification-new .notification-addNew {
+  border: 5px dashed black;
+  border-radius: 25px;
+  padding: 20px;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.container .main .main-calendar .calendar-card .calendar-notification .notification-new .notification-addNew:hover {
+  color: var(--logoSpanTitleAndMainTitle, #3535ff);
+  border: 5px dashed var(--logoSpanTitleAndMainTitle, #3535ff);
+}
+
+.container .main .main-calendar .calendar-card .calendar-notification .notification-list {
+  overflow: hidden;
+  height: 80%;
+}
+
+.container .main .main-calendar .calendar-card .calendar-notification .notification-list .meet {
+  background-color: #fff;
+  padding: 15px;
+  margin: 5px 0;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-right: 5px solid var(--logoSpanTitleAndMainTitle, #3535ff);
+  cursor: pointer;
+}
+
+.container .main .main-calendar .calendar-card .calendar-notification .notification-list .meet:hover {
+  background-color: #000;
+  color: #fff;
+  border-right: 10px solid var(--logoSpanTitleAndMainTitle, #3535ff);
+}
+
+.container .main .main-calendar .calendar-card .calendar-notification .notification-list .meet .meet-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.container .main .main-calendar .calendar-card .calendar-notification .notification-list .meet .meet-date {
+  font-size: 1.2rem;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.container .main .main-reports {
+  color: black;
+  margin: 0 40px;
+  padding: 5px;
+}
+
+.container .main .main-reports.main-hide {
+  display: none;
+}
+
+.container .main .main-reports h2 {
+  color: var(--logoSpanTitleAndMainTitle, #3535ff);
+  text-align: center;
+  border-bottom: 5px solid var(--logoSpanTitleAndMainTitle, #3535ff);
+}
+
+.container .main .main-reports .reports-bot {
+  display: flex;
+  height: calc(100vh - 110px);
+}
+
+.container .main .main-reports .reports-bot .reports-botPanel {
+  width: 50%;
+  overflow: hidden;
+}
+
+.container .main .main-reports .reports-bot .reports-botPanel .reports-displayer {
+  height: 100%;
+  background-color: var(--logoSpanTitleAndMainTitle, #3535ff);
+  padding: 80px 0;
+  margin: 30px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+}
+
+.container .main .main-reports .reports-bot .reports-botPanel .reports-displayer > * {
+  margin-bottom: 20px;
+}
+
+.container .main .main-reports .reports-bot .reports-botPanel .reports-displayer .bot-message {
+  background-color: #fff;
+  font-weight: bold;
+  padding: 20px;
+  text-align: right;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+}
+
+.container .main .main-reports .reports-bot .reports-botPanel .reports-displayer .bot-message::before {
+  content: "BOT";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 0.7rem;
+}
+
+.container .main .main-reports .reports-bot .reports-botPanel .reports-displayer .human-message {
+  background-color: #000;
+  font-weight: bold;
+  color: #fff;
+  padding: 20px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  position: relative;
+}
+
+.container .main .main-reports .reports-bot .reports-botPanel .reports-displayer .human-message::after {
+  content: "YOU";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #fff;
+  font-size: 0.7rem;
+}
+
+.container .main .main-reports .reports-bot .reports-botInfo {
+  width: 50%;
+  padding: 40px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.container .main .main-reports .reports-bot .reports-botInfo > * {
+  margin-bottom: 30px;
+}
+
+.container .main .main-reports .reports-bot .reports-botInfo .reports-option {
+  cursor: pointer;
+}
+
+.container .main .main-reports .reports-bot .reports-botInfo .reports-agreedReport {
+  display: none;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+  background-color: var(--leftRightBackgrounds, #d6cdff);
+  border-radius: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.container .main .main-reports .reports-bot .reports-botInfo .reports-agreedReport.show {
+  display: flex;
+}
+
+.container .main .main-reports .reports-bot .reports-botInfo .reports-agreedReport p {
+  cursor: pointer;
+}
+
+.container .main .main-help {
+  color: black;
+  background-color: var(--leftRightBackgrounds, #d6cdff);
+  padding: 40px;
+  margin: 35px;
+  display: flex;
+  border-radius: 25px;
+}
+
+.container .main .main-help.main-hide {
+  display: none;
+}
+
+.container .main .main-help .help-side {
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.container .main .main-help .help-side > * {
+  margin-bottom: 10px;
+}
+
+.container .main .main-help .help-side > p {
+  font-style: italic;
+}
+
+.container .main .main-help .help-side h3::before {
+  content: "in ";
+  color: var(--logoSpanTitleAndMainTitle, #3535ff);
+}
+
+.container .main .main-help .help-side h3::after {
+  content: " you can ";
+  color: var(--logoSpanTitleAndMainTitle, #3535ff);
+}
+
+.container .main .main-help .help-leftSide {
+  border-right: 1px solid black;
+}
+
+.container .main .main-help .help-rightSide {
+  border-left: 1px solid black;
+}
+
+.container .main .main-help .help-rightSide > * {
+  margin-bottom: 25px;
+}
+
+.container .main .main-help .help-rightSide .help-color {
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+.container .main .main-help .help-rightSide .help-green {
+  background-color: green;
+}
+
+.container .main .main-help .help-rightSide .help-yellow {
+  background-color: yellow;
+}
+
+.container .main .main-help .help-rightSide .help-red {
+  background-color: red;
+}
+
+.container .rightBar-container {
+  position: relative;
+  box-shadow: 0px 10px 85px -2px #888;
+  background-color: var(--leftRightBackgrounds, #d6cdff);
+}
+
+.container .rightBar-container .rightBar-small {
+  position: relative;
+  display: inline-block;
+  left: 42px;
+  top: 50px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  user-select: none;
+}
+
+.container .rightBar-container .rightBar-small .break {
+  margin-top: 30px;
+}
+
+.container .rightBar-container .rightBar-small.hide {
+  display: none;
+}
+
+.container .rightBar-container .rightBar {
+  text-align: center;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  height: 100%;
+}
+
+.container .rightBar-container .rightBar.hide {
+  display: none;
+}
+
+.container .rightBar-container .rightBar h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.container .rightBar-container .rightBar-box {
+  padding-bottom: 50px;
+}
+
+.container .rightBar-container .rightBar-box h3 {
+  margin-bottom: 1px;
+}
+
+.container .rightBar-container .rightBar-box .theme {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  background-color: #000;
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.container .rightBar-container .rightBar-box .theme-switcher {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.container .rightBar-container .rightBar-box .theme-switcher.orange {
+  background-color: #ffa500;
+}
+
+.container .rightBar-container .rightBar-box .theme-switcher.red {
+  background-color: #ffb2b2;
+}
+
+.container .rightBar-container .rightBar-box .theme-switcher.bisque {
+  background-color: bisque;
+}
+
+.container .rightBar-container .rightBar-box .theme-switcher.purple {
+  background-color: #9090ff;
+}
+
+.container .rightBar-container .rightBar-box .activity-panel {
+  width: 80%;
+  height: 40vh;
+  border: 1px solid black;
+  background-color: #fff;
+  border-radius: 25px;
+  user-select: none;
+  pointer-events: none;
+  margin: 0 auto;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.container .rightBar-container .rightBar-box .activity-panel p:first-child {
+  background-color: var(--logoSpanTitleAndMainTitle, #3535ff);
+  color: #fff;
+  position: relative;
+}
+
+.container .rightBar-container .rightBar-box .activity-panel p:first-child::before {
+  content: "current";
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  font-size: 0.4rem;
+}
+
+.container .rightBar-container .rightBar-box .activity-panel p {
+  padding: 20px 0;
+}
+
+.container .rightBar-container .rightBar-box .status {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.container .rightBar-container .rightBar-box .status-info {
+  background-color: #009000;
+  border: 1px solid black;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.container .rightBar-container .rightBar-box .status-infoY {
+  background-color: yellow;
+}
+
+.container .rightBar-container .rightBar-box .status-infoR {
+  background-color: red;
+}
+
+.container .rightBar-container .rightBar-box .status h4 {
+  margin-left: 10px;
+  font-size: 0.7rem;
+}
+
+.container .rightBar-container .rightBar-boxBottom {
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+.container .rightBar-container .rightBar-boxBottom .time {
+  margin-top: 10px;
+}
+
+.container .rightBar-container .rightBar-toggler {
+  width: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 3px;
+  background-color: #000000;
+  color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+
+.container .rightBar-container .rightBar-toggler.hided {
+  left: 40px;
+}
+
+.calendar-addNewPanel {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: var(--leftRightBackgrounds, #d6cdff);
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.calendar-addNewPanel.show {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.calendar-addNewPanel .calendar-exit {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.calendar-addNewPanel .calendar-exit:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.calendar-addNewPanel .calendar-event {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.calendar-addNewPanel .calendar-event label {
+  color: var(--logoSpanTitleAndMainTitle, #3535ff);
+}
+
+.calendar-addNewPanel .calendar-event input {
+  padding: 10px;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  background-color: var(--leftRightBackgrounds, #d6cdff);
+  border-bottom: 1px solid var(--logoSpanTitleAndMainTitle, #3535ff);
+}
+
+.calendar-addNewPanel .calendar-btn {
+  padding: 20px;
+  font-size: 2rem;
+  border-radius: 25px;
+  margin-top: 30px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.calendar-addNewPanel .calendar-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.calendar-addNewPanel .calendar-messages {
+  display: none;
+  background-color: red;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.calendar-addNewPanel .calendar-messages.show {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: lightblue;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7cc2da;
+}
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .container.hide-custom {
+    grid-template-columns: 1fr;
+  }
+  .container .leftBar {
+    max-width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+  .container .main {
+    overflow: visible;
+    max-width: 100%;
+  }
+  .container .main .main-home {
+    display: block;
+    height: 100%;
+    padding: 0;
+  }
+  .container .main .main-home .case {
+    margin: 5px;
+    margin-bottom: 50px;
+  }
+  .container .main .main-home .case-profile .case-show .case-show-details .flex-container {
+    padding: 5px;
+  }
+  .container .main .main-home .case-earnings .case-show .grid {
+    display: block;
+  }
+  .container .main .main-home .case-earnings .case-show .grid .grid-img svg {
+    margin: 0 auto;
+  }
+  .container .main .main-home .case-earnings .case-show .grid .grid-description .description-flex {
+    justify-content: center;
+  }
+  .container .main .main-analytics .analytics-title {
+    text-align: center;
+  }
+  .container .main .main-products .product-detail .product-info h3 {
+    width: max-content;
+  }
+  .container .main .main-products .product-detail .product-info svg {
+    margin-right: 0px;
+  }
+  .container .main .main-products .product-detail .product-info .product-info-prep {
+    flex-direction: column;
+  }
+  .container .main .main-products .product-detail .product-info .product-info-cook {
+    flex-direction: column;
+  }
+  .container .main .main-products .product-detail .product-info .product-info-ingredients {
+    flex-direction: column;
+  }
+  .container .main .main-order .order-table .order-tableColumn {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container .main .main-order .order-table .order-tableColumn .media-displayer {
+    display: none;
+  }
+  .container .main .main-order .order-table .order-tableRow .order-tableRow-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container .main .main-order .order-table .order-tableRow .order-tableRow-grid > .media-displayer {
+    display: none;
+  }
+  .container .main .main-order .order-detail {
+    padding: 25px;
+  }
+  .container .main .main-order .order-detail .order-container {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .container .main .main-order .order-detail .order-container .order-info {
+    width: 100%;
+  }
+  .container .main .main-order .order-detail .order-container .order-info h2 {
+    font-size: 2rem;
+  }
+  .container .main .main-order .order-detail .order-container .order-info svg {
+    width: 150px;
+    height: 150px;
+    padding-top: 50px;
+  }
+  .container .main .main-order .order-detail .order-container .order-description {
+    width: 100%;
+  }
+  .container .main .main-order .order-detail .order-container .order-description .order-flex {
+    padding: 5px;
+  }
+  .container .main .main-calendar {
+    width: 100vw;
+    padding: 0px;
+  }
+  .container .main .main-calendar h2 {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .container .main .main-calendar .calendar-card {
+    flex-direction: column;
+    height: max-content;
+  }
+  .container .main .main-calendar .calendar-card .calendar-panel {
+    width: 100%;
+    padding: 10px;
+  }
+  .container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel {
+    padding-top: 0px;
+  }
+  .container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel .downPanel-days .day {
+    width: 40px;
+    height: 40px;
+  }
+  .container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel .downPanel-weekDays p {
+    width: 40px;
+  }
+  .container .main .main-calendar .calendar-card .calendar-notification {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .container .main .main-calendar .calendar-card .calendar-notification .notification-new {
+    margin-bottom: 20px;
+  }
+  .container .main .main-reports {
+    padding: 0px;
+    margin: 0px;
+  }
+  .container .main .main-reports .reports-bot {
+    display: block;
+    height: max-content;
+  }
+  .container .main .main-reports .reports-bot .reports-botPanel {
+    width: 100%;
+  }
+  .container .main .main-reports .reports-bot .reports-botInfo {
+    width: 100%;
+  }
+  .container .main .main-help {
+    display: block;
+  }
+  .container .main .main-help .help-side {
+    width: 100%;
+  }
+  .container .main .main-help .help-side > * {
+    line-height: 30px;
+  }
+  .container .main .main-help .help-leftSide {
+    border: none;
+  }
+  .container .main .main-help .help-rightSide {
+    border: none;
+  }
+  .container .rightBar-container {
+    max-width: 100%;
+  }
+  .container .rightBar-container .rightBar.hide {
+    display: block;
+  }
+  .container .rightBar-container .rightBar-box .theme-switcher {
+    width: 40px;
+    height: 40px;
+  }
+  .container .rightBar-container .rightBar-small {
+    display: none;
+  }
+  .container .rightBar-toggler {
+    display: none;
+  }
+  .calendar-addNewPanel.show {
+    margin-top: 600px;
+    width: 90%;
+  }
+}

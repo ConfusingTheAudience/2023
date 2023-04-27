@@ -1,0 +1,54 @@
+.main-help {
+    color: black;
+    background-color: var(--leftRightBackgrounds, $leftRightBackgrounds);
+    padding: 40px;
+    margin: 35px;
+    display: flex;
+    border-radius: 25px;
+    &.main-hide {
+      display: none;
+    }
+    .help-side {
+      width: 50%;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.2rem;
+      & > * {
+        margin-bottom: 10px;
+      }
+      & > p {
+        font-style: italic;
+      }
+      h3::before {
+        content: "in ";
+        color: var(--logoSpanTitleAndMainTitle, $logoSpanTitleAndMainTitle);
+      }
+      h3::after {
+        content: " you can ";
+        color: var(--logoSpanTitleAndMainTitle, $logoSpanTitleAndMainTitle);
+      }
+    }
+    .help-leftSide {
+      border-right: 1px solid black;
+    }
+    .help-rightSide {
+      border-left: 1px solid black;
+      & > * {
+        margin-bottom: 25px;
+      }
+      .help-color {
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 15px;
+      }
+      .help-green {
+        background-color: green;
+      }
+      .help-yellow {
+        background-color: yellow;
+      }
+      .help-red {
+        background-color: red;
+      }
+    }
+  }

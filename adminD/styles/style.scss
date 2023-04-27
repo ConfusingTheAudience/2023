@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "./_variables";
+
+.container {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  background-color: #fff;
+  &.hide-custom {
+    grid-template-columns: 0.3fr 1.3fr 100px;
+  }
+  &.untouch {
+    opacity: 0.2;
+    user-select: none;
+    pointer-events: none;
+  }
+  // LEFTBAR SECTION START
+  @import "sideBars/_leftBar";
+  // LEFTBAR SECTION END
+
+  .main {
+    overflow: auto;
+    &-title {
+      text-align: center;
+      padding: 10px 0;
+      color: var(--logoSpanTitleAndMainTitle, $logoSpanTitleAndMainTitle);
+    }
+    @import "mainContent/_main-home";
+    @import "mainContent/_main-order";
+    @import "mainContent/_main-analytics";
+    @import "mainContent/_main-products";
+    @import "mainContent/_main-calendar";
+    @import "mainContent/_main-reports";
+    @import "mainContent/_main-help";
+  }
+  // RIGHTBAR SECTION START
+  @import "sideBars/_rightBar";
+  // RIGHTBAR SECTION END
+}
+
+// ADDITIONAL CALENDAR ADD EVENT OUT OF CONTAINER TO MAKE OPACITY WORK
+@import "./_calendarMeetOrganizer";
+
+@import "./_scrollbar";
+@import "./_media";

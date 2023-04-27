@@ -1,0 +1,173 @@
+@media only screen and (max-width: 1400px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .container.hide-custom {
+    grid-template-columns: 1fr;
+  }
+  .container .leftBar {
+    max-width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+  .container .main {
+    overflow: visible;
+    max-width: 100%;
+  }
+  .container .main .main-home {
+    display: block;
+    height: 100%;
+    padding: 0;
+  }
+  .container .main .main-home .case {
+    margin: 5px;
+    margin-bottom: 50px;
+  }
+  .container .main .main-home .case-profile .case-show .case-show-details .flex-container {
+    padding: 5px;
+  }
+  .container .main .main-home .case-earnings .case-show .grid {
+    display: block;
+  }
+  .container .main .main-home .case-earnings .case-show .grid .grid-img svg {
+    margin: 0 auto;
+  }
+  .container .main .main-home .case-earnings .case-show .grid .grid-description .description-flex {
+    justify-content: center;
+  }
+  .container .main .main-analytics .analytics-title {
+    text-align: center;
+  }
+  .container .main .main-products .product-detail .product-info h3 {
+    width: max-content;
+  }
+  .container .main .main-products .product-detail .product-info svg {
+    margin-right: 0px;
+  }
+  .container .main .main-products .product-detail .product-info .product-info-prep {
+    flex-direction: column;
+  }
+  .container .main .main-products .product-detail .product-info .product-info-cook {
+    flex-direction: column;
+  }
+  .container .main .main-products .product-detail .product-info .product-info-ingredients {
+    flex-direction: column;
+  }
+  .container .main .main-order .order-table .order-tableColumn {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container .main .main-order .order-table .order-tableColumn .media-displayer {
+    display: none;
+  }
+  .container .main .main-order .order-table .order-tableRow .order-tableRow-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container .main .main-order .order-table .order-tableRow .order-tableRow-grid > .media-displayer {
+    display: none;
+  }
+  .container .main .main-order .order-detail {
+    padding: 25px;
+  }
+  .container .main .main-order .order-detail .order-container {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .container .main .main-order .order-detail .order-container .order-info {
+    width: 100%;
+  }
+  .container .main .main-order .order-detail .order-container .order-info h2 {
+    font-size: 2rem;
+  }
+  .container .main .main-order .order-detail .order-container .order-info svg {
+    width: 150px;
+    height: 150px;
+    padding-top: 50px;
+  }
+  .container .main .main-order .order-detail .order-container .order-description {
+    width: 100%;
+  }
+  .container .main .main-order .order-detail .order-container .order-description .order-flex {
+    padding: 5px;
+  }
+  .container .main .main-calendar {
+    width: 100vw;
+    padding: 0px;
+  }
+  .container .main .main-calendar h2 {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .container .main .main-calendar .calendar-card {
+    flex-direction: column;
+    height: max-content;
+  }
+  .container .main .main-calendar .calendar-card .calendar-panel {
+    width: 100%;
+    padding: 10px;
+  }
+  .container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel {
+    padding-top: 0px;
+  }
+  .container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel .downPanel-days .day {
+    width: 40px;
+    height: 40px;
+  }
+  .container .main .main-calendar .calendar-card .calendar-panel .calendar-downPanel .downPanel-weekDays p {
+    width: 40px;
+  }
+  .container .main .main-calendar .calendar-card .calendar-notification {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .container .main .main-calendar .calendar-card .calendar-notification .notification-new {
+    margin-bottom: 20px;
+  }
+  .container .main .main-reports {
+    padding: 0px;
+    margin: 0px;
+  }
+  .container .main .main-reports .reports-bot {
+    display: block;
+    height: max-content;
+  }
+  .container .main .main-reports .reports-bot .reports-botPanel {
+    width: 100%;
+  }
+  .container .main .main-reports .reports-bot .reports-botInfo {
+    width: 100%;
+  }
+  .container .main .main-help {
+    display: block;
+  }
+  .container .main .main-help .help-side {
+    width: 100%;
+  }
+  .container .main .main-help .help-side > * {
+    line-height: 30px;
+  }
+  .container .main .main-help .help-leftSide {
+    border: none;
+  }
+  .container .main .main-help .help-rightSide {
+    border: none;
+  }
+  .container .rightBar-container {
+    max-width: 100%;
+  }
+  .container .rightBar-container .rightBar.hide {
+    display: block;
+  }
+  .container .rightBar-container .rightBar-box .theme-switcher {
+    width: 40px;
+    height: 40px;
+  }
+  .container .rightBar-container .rightBar-small {
+    display: none;
+  }
+  .container .rightBar-toggler {
+    display: none;
+  }
+  .calendar-addNewPanel.show {
+    margin-top: 600px;
+    width: 90%;
+  }
+}

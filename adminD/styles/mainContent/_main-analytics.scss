@@ -1,0 +1,37 @@
+.main-analytics {
+    color: black;
+    background-color: var(--leftRightBackgrounds, $leftRightBackgrounds);
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 59px);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    &.main-hide {
+      display: none;
+    }
+    .analytics-title {
+      font-size: 3rem;
+      font-style: italic;
+    }
+    .analytics-icons {
+      display: flex;
+      align-items: center;
+      .analytics-imgL {
+        width: 200px;
+        height: 200px;
+      }
+      .analytics-imgR {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        top: 40px;
+        right: 25px;
+      }
+    }
+    .analytics-backTitle {
+      font-weight: bold;
+    }
+  }

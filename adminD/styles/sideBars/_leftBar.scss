@@ -1,0 +1,55 @@
+.leftBar {
+    box-shadow: 10px 0 5px -2px #888;
+    background-color: var(--leftRightBackgrounds, $leftRightBackgrounds);
+    &-header {
+      font-size: 1.5em; // 24px
+      text-transform: uppercase;
+      font-weight: 700;
+      & h1 {
+        text-align: center;
+        padding: 40px 0;
+        user-select: none;
+      }
+      & span {
+        color: var(--logoSpanTitleAndMainTitle, $logoSpanTitleAndMainTitle);
+      }
+    }
+    &-nav {
+      overflow: hidden;
+      .leftBar-nav-list .leftBar-nav-link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        text-decoration: none;
+        color: #000;
+        padding: 15px;
+        padding-left: 40px;
+        transition: all 0.5s ease-in-out;
+        svg {
+          transition: all 0.5s ease-in-out;
+        }
+        &.current {
+          color: #fff;
+          font-size: 1.5em;
+          background-color: var(
+            --logoSpanTitleAndMainTitle,
+            $logoSpanTitleAndMainTitle
+          );
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px;
+          & svg {
+            width: 35px;
+            height: 35px;
+            fill: #fff;
+          }
+        }
+        &:hover:not(.current) {
+          transform: translateX(10px);
+          color: var(--notCurrentMenuPick, $notCurrentMenuPick);
+          & svg {
+            fill: var(--notCurrentMenuPick, $notCurrentMenuPick);
+          }
+        }
+      }
+    }
+  }

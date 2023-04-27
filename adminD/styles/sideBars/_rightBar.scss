@@ -1,0 +1,150 @@
+.rightBar-container {
+    position: relative;
+    box-shadow: 0px 10px 85px -2px #888;
+    background-color: var(--leftRightBackgrounds, $leftRightBackgrounds);
+    .rightBar-small {
+      position: relative;
+      display: inline-block;
+      left: 42px;
+      top: 50px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      user-select: none;
+      & .break {
+        margin-top: 30px;
+      }
+      &.hide {
+        display: none;
+      }
+    }
+    .rightBar {
+      text-align: center;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      text-transform: uppercase;
+      height: 100%;
+      &.hide {
+        display: none;
+      }
+      & h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #000;
+      }
+      &-box {
+        padding-bottom: 50px;
+        & h3 {
+          margin-bottom: 1px;
+        }
+        & .theme {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 10px;
+          background-color: #000;
+          width: 80%;
+          margin: 0 auto;
+          padding: 15px;
+          border-radius: 25px;
+          &-switcher {
+            display: block;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            &.orange {
+              background-color: #ffa500;
+            }
+            &.red {
+              background-color: #ffb2b2;
+            }
+            &.bisque {
+              background-color: bisque;
+            }
+            &.purple {
+              background-color: #9090ff;
+            }
+          }
+        }
+        & .activity-panel {
+          width: 80%;
+          height: 40vh;
+          border: 1px solid black;
+          background-color: #fff;
+          border-radius: 25px;
+          user-select: none;
+          pointer-events: none;
+          margin: 0 auto;
+          overflow: hidden;
+          font-weight: bold;
+          & p:first-child {
+            background-color: var(
+              --logoSpanTitleAndMainTitle,
+              $logoSpanTitleAndMainTitle
+            );
+            color: #fff;
+            position: relative;
+            &::before {
+              content: "current";
+              position: absolute;
+              top: 20px;
+              left: 25px;
+              font-size: 0.4rem;
+            }
+          }
+          & p {
+            padding: 20px 0;
+          }
+        }
+        & .status {
+          display: flex;
+          align-items: center;
+          margin-top: 5px;
+          &-info {
+            background-color: $working;
+            border: 1px solid black;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-left: 50px;
+            &Y {
+              background-color: $mainteance;
+            }
+            &R {
+              background-color: $notWorking;
+            }
+          }
+          & h4 {
+            margin-left: 10px;
+            font-size: 0.7rem;
+          }
+        }
+      }
+      &-boxBottom {
+        margin-top: auto;
+        padding-bottom: 20px;
+        & .time {
+          margin-top: 10px;
+        }
+      }
+    }
+    .rightBar-toggler {
+      width: 25px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 3px;
+      background-color: #000000;
+      color: #fff;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      cursor: pointer;
+      text-align: center;
+      user-select: none;
+      &.hided {
+        left: 40px;
+      }
+    }
+  }

@@ -1,0 +1,215 @@
+@media only screen and (max-width: 1400px) {
+  .container {
+    grid-template-columns: 1fr;
+    &.hide-custom {
+      grid-template-columns: 1fr;
+    }
+    .leftBar {
+      max-width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+    .main {
+      overflow: visible;
+      max-width: 100%;
+      .main-home {
+        display: block;
+        height: 100%;
+        padding: 0;
+        .case {
+          margin: 5px;
+          margin-bottom: 50px;
+        }
+        .case-profile {
+          .case-show {
+            .case-show-details {
+              .flex-container {
+                padding: 5px;
+              }
+            }
+          }
+        }
+        .case-earnings {
+          .case-show {
+            .grid {
+              display: block;
+              .grid-img {
+                svg {
+                  margin: 0 auto;
+                }
+              }
+              .grid-description {
+                .description-flex {
+                  justify-content: center;
+                }
+              }
+            }
+          }
+        }
+      }
+      .main-analytics {
+        .analytics-title {
+          text-align: center;
+        }
+      }
+      .main-products {
+        .product-detail {
+          .product-info {
+            h3 {
+              width: max-content;
+            }
+            svg {
+              margin-right: 0px;
+            }
+            .product-info-prep {
+              flex-direction: column;
+            }
+            .product-info-cook {
+              flex-direction: column;
+            }
+            .product-info-ingredients {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+      .main-order {
+        .order-table {
+          .order-tableColumn {
+            grid-template-columns: repeat(3, 1fr);
+            .media-displayer {
+              display: none;
+            }
+          }
+          .order-tableRow {
+            .order-tableRow-grid {
+              grid-template-columns: repeat(3, 1fr);
+              & > .media-displayer {
+                display: none;
+              }
+            }
+          }
+        }
+        .order-detail {
+          padding: 25px;
+          .order-container {
+            justify-content: flex-start;
+            flex-direction: column;
+            .order-info {
+              width: 100%;
+              h2 {
+                font-size: 2rem;
+              }
+              svg {
+                width: 150px;
+                height: 150px;
+                padding-top: 50px;
+              }
+            }
+            .order-description {
+              width: 100%;
+              .order-flex {
+                padding: 5px;
+              }
+            }
+          }
+        }
+      }
+      .main-calendar {
+        width: 100vw;
+        padding: 0px;
+        h2 {
+          font-size: 0.9rem;
+          text-align: center;
+        }
+        .calendar-card {
+          flex-direction: column;
+          height: max-content;
+          .calendar-panel {
+            width: 100%;
+            padding: 10px;
+            .calendar-downPanel {
+              padding-top: 0px;
+              .downPanel-days {
+                .day {
+                  width: 40px;
+                  height: 40px;
+                }
+              }
+              .downPanel-weekDays {
+                p {
+                  width: 40px;
+                }
+              }
+            }
+          }
+          .calendar-notification {
+            width: 100%;
+            padding-bottom: 20px;
+            .notification-new {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+      .main-reports {
+        padding: 0px;
+        margin: 0px;
+        .reports-bot {
+          display: block;
+          height: max-content;
+          .reports-botPanel {
+            width: 100%;
+          }
+          .reports-botInfo {
+            width: 100%;
+          }
+        }
+      }
+      .main-help {
+        display: block;
+        .help-side {
+          width: 100%;
+          & > * {
+            line-height: 30px;
+          }
+        }
+        .help-leftSide {
+          border: none;
+        }
+        .help-rightSide {
+          border: none;
+        }
+      }
+    }
+    // RIGHTBAR
+    .rightBar-container {
+      max-width: 100%;
+      .rightBar {
+        &.hide {
+          display: block;
+        }
+      }
+      .rightBar-box {
+        .theme-switcher {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .rightBar-small {
+        display: none;
+      }
+    }
+    .rightBar-toggler {
+      display: none;
+    }
+  }
+  // CALENDAR FUNCTIONALITY MEDIA
+  .calendar-addNewPanel {
+    &.show {
+      margin-top: 600px;
+      width: 90%;
+    }
+  }
+}
