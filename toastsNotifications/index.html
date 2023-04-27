@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toasts</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="container">
+        <div class="btns">
+            <button onclick="showToast(successMsg)" class="btn btn-success">Success</button>
+            <button onclick="showToast(errorMsg)" class="btn btn-error">Error</button>
+            <button onclick="showToast(infoMsg)" class="btn btn-info">Info</button>
+            <button onclick="showToast(warningMsg)" class="btn btn-warning">Warning</button>
+        </div>
+        <div class="toastBox"></div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

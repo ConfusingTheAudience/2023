@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --btnText: #fff;
+  --success: green;
+  --error: red;
+  --info: blue;
+  --warning: #e9bd0c;
+}
+.container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #8dc6ff;
+}
+.container .btns {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+.container .btns .btn {
+  flex-grow: 1;
+  color: var(--btnText);
+  padding: 10px;
+  border-radius: 25px;
+  font-size: 1.6rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container .btns .btn:hover {
+  opacity: 1;
+}
+.container .btns .btn-success {
+  background-color: var(--success);
+}
+.container .btns .btn-error {
+  background-color: var(--error);
+}
+.container .btns .btn-info {
+  background-color: var(--info);
+}
+.container .btns .btn-warning {
+  background-color: var(--warning);
+}
+/* toast displayer */
+.container .toastBox {
+  /* this allow to appear elements from bottom */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  position: absolute;
+  width: 500px;
+  height: max-content;
+  right: 0;
+  bottom: 0;
+}
+.container .toastBox .toastBox-notification {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-style: italic;
+  gap: 10px;
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  animation: slideIn 3s normal;
+}
+.container .toastBox .toastBox-notification::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--success);
+  animation: timer 5s normal;
+}
+.container .toastBox .toastBox-notification.notification-error::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--error);
+  animation: timer 5s normal;
+}
+.container .toastBox .toastBox-notification.notification-info::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--info);
+  animation: timer 5s normal;
+}
+.container .toastBox .toastBox-notification.notification-warning::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--warning);
+  animation: timer 5s normal;
+}
+
+@keyframes timer {
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.container .toastBox .toastBox-notification .fa-solid {
+  font-size: 2rem;
+}
+.container .toastBox .toastBox-notification .fa-circle-check {
+  color: var(--success);
+}
+.container .toastBox .toastBox-notification .fa-triangle-exclamation {
+  color: var(--error);
+}
+.container .toastBox .toastBox-notification .fa-circle-info {
+  color: var(--info);
+}
+.container .toastBox .toastBox-notification .fa-circle-exclamation {
+  color: var(--warning);
+}
