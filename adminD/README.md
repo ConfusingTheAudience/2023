@@ -1,4 +1,4 @@
-NO UX/UI Admin Dashboard with theme switch, mobile friendly, basic mechanism of calendar, timer, list of products stored as object, details of products etc.
+NO UX/UI Admin Dashboard with theme switch, mobile friendly, basic mechanism of calendar, report bug message bot, timer, list of products stored as object, details of products etc.
 
 #1 Problem - blur/opacity on background not affecting additional modal
 
